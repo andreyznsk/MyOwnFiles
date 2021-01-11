@@ -10,14 +10,15 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
-<VBox fx:controller="fileManager.Controller" xmlns:fx="http://javafx.com/fxml" alignment="center">
+<VBox fx:controller="fileManager.Controller" xmlns:fx="http://javafx.com/fxml" alignment="center"
+        stylesheets="style.css">
     <MenuBar>
         <Menu text="File">
             <MenuItem text="Exit" onAction="#menuItemFileExit"/>
         </Menu>
     </MenuBar>
     <TextField editable="false"/>
-    <ListView VBox.vgrow="ALWAYS"/>
+    <ListView VBox.vgrow="ALWAYS" fx:id="listVewFiles"/>
     <HBox spacing="5">
         <Button text="View" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
         <Button text="Copy" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
