@@ -17,8 +17,8 @@
             <MenuItem text="Exit" onAction="#menuItemFileExit"/>
         </Menu>
     </MenuBar>
-    <TextField editable="false"/>
-    <ListView VBox.vgrow="ALWAYS" fx:id="listVewFiles"/>
+    <TextField editable="false" fx:id="pathField" focusTraversable="false"/>
+    <ListView VBox.vgrow="ALWAYS" fx:id="listVewFiles" onMouseClicked="#filesListClicked"/>
     <HBox spacing="5">
         <Button text="View" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
         <Button text="Copy" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>

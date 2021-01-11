@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class FileInfo {
+    public static final String UP_TOKEN = "[..]";
     private String filename;
     private long fileLength;
 
@@ -34,6 +35,19 @@ public class FileInfo {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public boolean isDirectory(){
+        return  fileLength == -1L;
+    }
+
+    public boolean isUpElement(){
+        return fileLength == -2L;
+    }
+
+    public FileInfo(String name, long length){
+        this.fileLength = length;
+        this.filename = name;
     }
 }
 
